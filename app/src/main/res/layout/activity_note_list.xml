@@ -1,0 +1,85 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_height="match_parent"
+    tools:context=".NoteListActivity">
+
+    <android.support.v7.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="12dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginBottom="12dp"
+        android:id="@+id/recyclerview"/>
+
+    <android.support.v7.widget.Toolbar
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+        android:background="?attr/colorPrimary"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/compose_layout"
+        android:orientation="vertical"
+        android:layout_alignParentBottom="true"
+        android:background="#fff">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp"
+            android:paddingLeft="3dp"
+            android:paddingRight="3dp"
+            android:background="@color/primary">
+        
+            <EditText
+                android:layout_marginLeft="12dp"
+                android:layout_width="0dp"
+                android:layout_weight="0.8"
+                android:layout_height="40dp"
+                android:textSize="21sp"
+                android:ems="20"
+                android:id="@+id/title_edittext"
+                android:hint="Title"
+                android:textColor="#fff"
+                android:inputType="textCapSentences|textEmailSubject"
+                android:textColorHint="@color/edittext_no_foucs_color"
+                android:background="@drawable/edittext_transp"/>
+
+            <ImageButton
+                android:layout_width="0dp"
+                android:padding="2dp"
+                android:id="@+id/action_send"
+                android:layout_gravity="center"
+                android:scaleType="centerInside"
+                android:layout_weight="0.08"
+                android:layout_height="match_parent"
+                android:background="@drawable/fake_ripple"
+                android:src="@mipmap/ic_send_white_24dp"/>
+
+        </LinearLayout>
+
+        <EditText
+            android:paddingTop="12dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:textColor="@color/black_54"
+            android:id="@+id/message_edittext"
+            android:gravity="top|left"
+            android:hint="Write Something.."
+            android:textColorHint="#ffc9cdd1"
+            android:inputType="textCapSentences|textMultiLine"
+            android:maxLength="2000"
+            android:maxLines="40" />
+
+    </LinearLayout>
+
+</RelativeLayout>
